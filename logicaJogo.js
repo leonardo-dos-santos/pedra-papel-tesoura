@@ -53,6 +53,6 @@ function playGame() {
   }
 }
   
-  // Inicie o jogo
+// Inicie o jogo
 playGame();
   
