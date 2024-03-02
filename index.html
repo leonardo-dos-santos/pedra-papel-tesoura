@@ -3,13 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="rock-paper-scissors.png" type="image/x-icon">
+    <title>Game</title>
 </head>
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissor</button>
-    <div id="choice"></div>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <main id="container">
+        <h4>Chose an option bellow</h4>
+        <div>
+            <div id="choice"></div>
+            <div id="winner-message"></div>
+            <div class="counting">
+                <div class="playerScore">Player: 0</div>
+                <div class="computerScore">Computer: 0</div>
+            </div>
+        </div>
+        <div class="card">
+            <div id="rock" class="cards">
+                <span class="icon">✊</span>
+                <p>Rock</p>
+            </div>
+            <div id="paper" class="cards">
+                <span class="icon">✋</span>
+                <p>Paper</p>
+            </div>
+            <div id="scissors"class="cards">
+                <span class="icon">✌</span>
+                <p>Scissors</p>
+            </div>
+        </div>
+    </main>
     <script src="logicaJogo.js"></script>
 </body>
 </html>
