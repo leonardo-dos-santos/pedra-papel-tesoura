@@ -5,7 +5,7 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection) {
-  if (playerScore < 5 && computerScore < 5) {
+  if (playerScore <= 5 && computerScore <= 5) {
     const computerSelection = getComputerChoice();
     let result = "";
 
@@ -24,7 +24,7 @@ function playRound(playerSelection) {
     displayResult(result, playerSelection, computerSelection);
     updateScore(result);
 
-    if (playerScore === 5 || computerScore === 5) {
+    if (playerScore === 6 || computerScore === 6) {
       displayWinner();
       resetGame();
     }
@@ -65,6 +65,11 @@ function displayWinner() {
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
+
+  const playerScoreElement = document.querySelector(".playerScore");
+  const computerScoreElement = document.querySelector(".computerScore");
+  playerScoreElement.textContent = "Player: 0";
+  computerScoreElement.textContent = "Computer: 0";
 }
 
 function handleClick(selection) {
