@@ -43,9 +43,9 @@ function updateScore(result) {
   const playerScoreElement = document.querySelector(".playerScore");
   const computerScoreElement = document.querySelector(".computerScore");
 
-  if (result === 'player') {
+  if (result === "player") {
     playerScore++;
-  } else if (result === 'computer') {
+  } else if (result === "computer") {
     computerScore++;
   }
   playerScoreElement.textContent = `Player: ${playerScore}`;
@@ -56,6 +56,10 @@ function displayWinner() {
   const winnerMessage = document.getElementById("winner-message");
   const winner = playerScore === 5 ? "Player" : "Computer";
   winnerMessage.textContent = `${winner} is the winner!`;
+
+  setTimeout(() => {
+    winnerMessage.textContent = "";
+  }, 2000);
 }
 
 function resetGame() {
